@@ -20,6 +20,14 @@ Route::get('/contact', function() {
 	return view('pages.contact');
 });
 
+Route::get('/login', function() {
+	return view('pages.login');
+});
+
+Route::post('/loginsuccess', 'Controller@loginto');
+
+
+
 
 
 Route::group(array('prefix' => 'pages'), function() {
@@ -27,7 +35,7 @@ Route::group(array('prefix' => 'pages'), function() {
 
 
 	 // about page (resources/views/pages/about.blade.php)
-	Route::get('about', function()
+	Route::get('/about', function()
 	{
 	    return View::make('pages.about');
 	});

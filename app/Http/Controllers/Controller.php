@@ -9,5 +9,13 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 
 class Controller extends BaseController
 {
-    use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
+    // use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
+
+    public function loginto(Request $Request)
+    {
+    	$username = $Request->input('username');
+    	$password = $Request->input('password');
+
+    	echo $username."---".$password;
+    }
 }
